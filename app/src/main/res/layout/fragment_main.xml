@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7b7b"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="车票信息"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:background="#7B7B7B"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:gravity="center"
+            android:weightSum="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="G4798"
+                android:id="@+id/tv_shift" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="杭州"
+                android:id="@+id/tv_from"
+                android:layout_weight="1"
+                android:gravity="center"
+                 />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上海"
+                android:id="@+id/tv_destination"
+                android:layout_weight="1"
+                android:gravity="center"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4号候车室"
+                android:id="@+id/tv_room"
+                android:layout_weight="1.40"
+                android:gravity="center"
+            />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016年09月05日 11:22"
+                android:id="@+id/tv_timetable"
+                android:layout_weight="2"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="07车03C号"
+                android:id="@+id/tv_seat"
+                android:layout_weight="1.75"
+                android:gravity="center"
+                 />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3301292001XXXX7821"
+                android:id="@+id/tv_id"
+                android:layout_weight="0.84"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="张三"
+                android:id="@+id/tv_name"
+                android:layout_weight="1.10"
+                android:gravity="center"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>

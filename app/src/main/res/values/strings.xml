@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, MainTabActivity!</string>
+    <string name="app_name">智能防丢</string>
+    <string name="on">Turn On</string>
+    <string name="off">Turn Off</string>
+    <string name="Visible">Get Visible</string>
+    <string name="List">List Devices</string>
+    <string name="settings">setting</string>
+
+    <string name="skin_tabbar_icon_main">首页</string>
+    <string name="skin_tabbar_icon_device">设备</string>
+    <string name="skin_tabbar_icon_map">地图</string>
+    <string name="skin_tabbar_icon_me">我</string>
+</resources>

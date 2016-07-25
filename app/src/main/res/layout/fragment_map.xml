@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<RelativeLayout android:layout_height="wrap_content" android:layout_width="wrap_content" xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.baidu.mapapi.map.MapView android:layout_height="fill_parent"
+        android:layout_width="fill_parent" android:clickable="true"
+        android:id="@+id/id_bmapView"/>
+
+    <ImageView
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_geo"/>
+
+</RelativeLayout>
+
