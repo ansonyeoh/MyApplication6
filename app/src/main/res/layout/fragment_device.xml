@@ -2,13 +2,40 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"  >
+    android:orientation="vertical">
+    <include layout="@layout/toolbar_device"/>
 
     <Button
         android:id="@+id/bt1"
-        android:text="添加设备"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#FFC107"/>
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#FFC107"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:text="添加设备"
+        />
+
+    <!--<Button-->
+        <!--android:id="@+id/bt2"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:text="WIFI扫描" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#d7e3fb"
+        android:layout_marginTop="10dp">
+        <com.software.anson.myapplication.swipemenu.SwipeMenuListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
 
 </LinearLayout>

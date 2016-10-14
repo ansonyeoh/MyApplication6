@@ -6,12 +6,13 @@ android {
     sourceSets {
         main {
             jniLibs.srcDirs = ['libs']
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
         }
     }
     android { compileOptions.encoding = "GBK" }
     defaultConfig {
         applicationId "com.software.anson.myapplication"
-        minSdkVersion 18
+        minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
@@ -27,6 +28,7 @@ android {
     }
 }
 
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:22.1.1'
@@ -34,4 +36,6 @@ dependencies {
     compile files('libs/BaiduLBS_Android.jar')
     compile files('libs/httpmime-4.1.2.jar')
     compile files('libs/IndoorscapeAlbumPlugin.jar')
+    compile files('libs/BaiduTraceSDK_v2_1_14.jar')
+    compile files('libs/mappwidget_1.4.1_trial.jar')
 }

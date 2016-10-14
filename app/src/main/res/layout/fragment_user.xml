@@ -1,26 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical">
-    <Button
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/tab_halo">
+
+    <include layout="@layout/toolbar_user"
+        android:id="@+id/toolbar_user"/>
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/bt_id_code"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="50dp"
-        android:textSize="16sp"
-        android:textColor="#000000"
+        android:layout_height="80dp"
+        android:id="@+id/tv_info"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
         android:paddingLeft="5dp"
         android:paddingTop="5dp"
         android:paddingRight="5dp"
         android:paddingBottom="5dp"
-        android:drawableLeft="@drawable/logo"
+        android:gravity="center"
+        android:background="#ffffff"
         />
-    <RelativeLayout
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:id="@+id/bt_jiebang"
+            android:layout_below="@+id/tx2"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:background="#7289f8"
+            android:layout_marginTop="10dp"
+            />
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
 
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="使用手册"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="1.首页模块，橙色部分为用户车票信息栏，用于显示用户的车票信息，用户登录后会自动加载用户车票信息。下面部分为一张自制的行李方位地图，用户登录后会显示行李所在的大概位置，用户未登录时，显示中国中车logo 	"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      2.设备模块，用户租赁设备后，登录系统，点击设备模块的添加设备按钮，就能动态的将租赁的设备信息及控制组件加载出来。用户可以侧滑设备项，点击启动或关闭设备。"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      3.订餐模块，此模块为本app的特色模块，用户可以自行挑选列车提供的餐饮或商品。商品下部显示价格，方便用户选购。初次选购时，系统会跳转到登录界面，用登录本app的账户即可登录。成功后选择您所想购买的物品，选择数量，填写位置和姓名，即可提交订单。后期可添加第三方支付几口，方便用户在线支付。订餐后台管理平台就能收到订单，进行处理。"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      4.地图模块，本地图采用了百度地图的高精度定位api，对用户和设备进行实时定位。地图的功能主要有两个，（1）用户基本的地图需求，在列车上，很多乘客会关注自己到了哪里，在无从确定的情况下，这时他们可能就会打开地图软件来确定自己的方位。此时，本功能就得到体现。（2）定位行李的大概位置，本模块还添加了设备定位的功能 可以显示设备在地图上的位置，理论精度达到1-3米，支持室内定位，方便用户追踪设备，定位小偷位置。
+"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      5.用户模块，用于用户登录、注册账户，显示用户租赁设备的消费金额。下面部分为用户使用手册和一些常见的用户乘车小贴士，方便用户使用和提高列车防盗意识。"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="乘车贴士"/>
 
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      1.行李箱和随身一些包裹，要放在视线可见处或者租用车站提供的防丢器，以免被不法分子趁机取走。"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      2. 每一趟动车都要求准点开行，即便丢失了行李物品的情况下，家长也最好不要和小孩分开行动。"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      3. 在搭乘车辆时，乘客要看紧自己的孩子，以免给不法分子留下机会。不论是小孩还是家长，在发现同伴走失了的情况下，除了可以用通讯设备联络对方之外，还应在第一时间向乘务人员等铁路部门相关人员汇报，在车厢或候车大厅开展广播寻人启事。"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      4. 乘务人员提醒，即便是落下了物品，也切记千万不能追车，尤其是不要上车寻找，导致耽误时间被关在车上。“较为妥善的处理办法就是直接拨打12306铁路客服电话，告知客服自己乘坐的车次车厢，描述已丢失的行李物品的形状样式。"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      5. 不少乘客出行都会携带笔记本电脑、平板电脑、手机和游戏机等电子产品，边坐车边玩为旅途解乏。不过，过度沉溺手机游戏，就容易错过到站下车时间。另外，不少乘客都习惯将便携式电子产品顺手一放，很容易就会遗忘在座位上，并且极易被盗。在此，铁路部门提醒乘客朋友在加强防盗的同时，下车前一定要清点随身携带的物品，做到行李物品也要安全带回家。"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      6. 由于动车或高铁进站验票现在全部是读卡机，因此，车票要妥善保管，不要卷曲和脏污，避免读卡机识别不了影响进站，特别是车票右下角二维码部分要确保干净与完整。使用本app的用户可以扫描二维码登录。"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      7. 放在衣兜内的钱财一定要随时保管好，不要放松警惕，以防被不法分子下手。也不要经常清点贵重物品，以免引起扒手的注意。衣兜内如果有贵重物品，在睡觉时将衣服脱下放在枕头下。"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      8. 行李箱和随身一些包裹，要放在视线可见处或者租用车站提供的防丢器，以免被不法分子趁机取走。"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      9. 上下车时不要拥挤，部分不法分子专门在乘客上下车时，盗窃乘客的财物。下站出站前将自己的物品仔细清点，避免遗漏，按顺序出站，将挂在腰间的手机和口袋内的钱包看好。"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      10. 动车组列车车票当日当次车有效，乘坐动车组列车的旅客如中途下车，未乘区间车票失效;动车组列车只发售二等座车学生票，学生票为全价票的75%，学生票的售票时间是每年的6月1日至9月30日、12月1日至次年的3月31日。乘坐动车旅客携带品的外部最大尺寸：长、宽、高各为60、35、35厘米，杆状物品的长度不能超过180厘米;动车组车门验票由车站负责，动车组发车前由列车长确认乘坐动车旅客乘下车完毕后，通知司机关闭车门;动车组列车各部位均不得吸烟，动车组列车不办理补票，动车组列车丹阳站不发售站台票;动车组列车在开车前10分钟停止售票，开车前5分钟停止检票。"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      11. 不要将装有财物的衣服挂在车内衣帽勾上，不要将手机和钱财放在小桌上，这样很容易被不法分子盯上趁机下手。"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      12. 动车组通常停靠在专门设制的高站台上。凡有动车停靠的车站，均在站台上设置上下车厢地面指示标识，乘坐动车旅客到达站台后，在车站工作人员的引导下，按照车厢号在车门位置排队等候，实行定位有序进站上车，车站于开车前5分钟停止检票。针对乘坐动车旅客密集上下的特点，实行前门下客，后门上客，避免旅客从同一车门上下，产生拥堵，最大限度地节省了上下车时间;车站广播和服务人员提前温馨提示旅客从指定位置做好上下车准备，确保旅客安全、快捷、有序上下车。"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      13. 乘坐动车旅客可以携带长60厘米、宽35厘米、高35厘米以下的物品上车，杆状物品的长度不能超过180厘米。携带品由旅客自行保管，对超过规定的携带品，应提前办理托运手续。最后使用防丢器！"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      14. 动车组采用智能化集中控制系统。广大乘坐动车旅客不要搬动、触碰各种安全按钮、开关。有的车厢设有可开启的气密窗，列车运行中，是严禁打开的。动车组全列禁烟，旅客在旅行途中请不要吸烟。"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      15. 情况紧急必须迅速撤离车厢时，可按下车厢两端门上方的紧急停车按钮，并可在列车停稳后使用破窗锤击打车厢逃生窗玻璃逃生。"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      16. 小孩身高低于120CM的不用票，直接上车就行，婴儿车可以带上高铁，而且可以提前上车，因为照顾老弱妇孺，如果行李多，可以让工作人员开通直梯，比较方便。"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="      17. 要保管好高铁车票，不要随意丢弃。因为车票上有个人的相关信息。如不作报销或者其他用途，可以将火车票销毁。"/>
 
-    </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

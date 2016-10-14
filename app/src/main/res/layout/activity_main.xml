@@ -5,8 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-<!--&lt;!&ndash;Toolbar&ndash;&gt;-->
-<!--<include layout="@layout/custom_toolbar" />-->
+    <!--&lt;!&ndash;Toolbar&ndash;&gt;-->
+
 
 
     <!--底部导航-->
@@ -20,132 +20,90 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
-
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/tab_menu">
     </FrameLayout>
 
-    <FrameLayout
-        android:id="@+id/frameMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/Indigo_colorPrimary"
-            android:orientation="horizontal">
-
-            <!-- 首页 -->
-
-            <FrameLayout
-                android:id="@+id/layout_main"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" >
-
-                <ImageView
-                    android:id="@+id/image_main"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="top|center"
-                    android:src="@drawable/main"/>
-
-
-            </FrameLayout>
-
-            <!-- 设备 -->
-
-            <FrameLayout
-                android:id="@+id/layout_device"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" >
-
-                <ImageView
-                    android:id="@+id/image_device"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="top|center"
-                    android:src="@drawable/device" />
-
-
-            </FrameLayout>
-
-            <!-- 点餐 -->
-
-            <FrameLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" >
-            </FrameLayout>
-
-            <!-- 地图 -->
-
-            <FrameLayout
-                android:id="@+id/layout_map"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" >
-
-                <ImageView
-                    android:id="@+id/image_map"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="top|center"
-                    android:src="@drawable/map" />
-
-
-            </FrameLayout>
-
-            <!-- 用户 -->
-
-            <FrameLayout
-                android:id="@+id/layout_user"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" >
-
-                <ImageView
-                    android:id="@+id/image_user"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="top|center"
-                    android:src="@drawable/user" />
-
-
-            </FrameLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:background="@android:color/black" >
-        </LinearLayout>
-    </FrameLayout>
-
-    <!-- 中间按钮背景 -->
-
-    <ImageView
-        android:id="@+id/toggle_btn"
-        android:layout_width="wrap_content"
+    <RadioGroup
+        android:id="@+id/tab_menu"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignTop="@+id/frameMenu"
-        android:layout_centerInParent="true"
-        android:src="@drawable/popup" />
+        android:orientation="horizontal"
+        android:background="#ffffff">
 
-    <!-- 中间按钮 -->
+        <RadioButton
+            android:id="@+id/layout_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector_checked_bg"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/tab_selector_main"
+            android:gravity="center_horizontal|bottom"
+            android:text="首页"
+            android:textColor="@drawable/tab_selector_tv_color" />
 
-    <ImageView
-        android:id="@+id/plus_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignTop="@+id/frameMenu"
-        android:layout_centerInParent="true"
-        android:src="@drawable/popupdown" />
+        <RadioButton
+            android:id="@+id/layout_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector_checked_bg"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_selector_device"
+            android:gravity="center_horizontal|bottom"
+            android:text="设备"
+            android:textColor="@drawable/tab_selector_tv_color" />
+
+        <RadioButton
+            android:id="@+id/layout_serve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector_checked_bg"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_selector_serve"
+            android:gravity="center_horizontal|bottom"
+            android:text="订餐"
+            android:textColor="@drawable/tab_selector_tv_color" />
+
+
+        <RadioButton
+            android:id="@+id/layout_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector_checked_bg"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_selector_map"
+            android:gravity="center_horizontal|bottom"
+            android:text="地图"
+            android:textColor="@drawable/tab_selector_tv_color" />
+
+
+
+        <RadioButton
+            android:id="@+id/layout_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/tab_selector_checked_bg"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_selector_user"
+            android:gravity="center_horizontal|bottom"
+            android:text="用户"
+            android:textColor="@drawable/tab_selector_tv_color"
+            android:checked="false" />
+    </RadioGroup>
+
+
 
 </RelativeLayout>
 </LinearLayout>

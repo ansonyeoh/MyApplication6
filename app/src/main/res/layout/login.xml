@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+   android:background="@drawable/login_back2"
+    android:orientation="vertical"
+    >
+    <include layout="@layout/toolbar_normal"
+        android:id="@+id/include" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="中车行李防丢登录系统"
+            android:id="@+id/textView2"
+            android:textSize="30sp"
+            android:textColor="#ffffff"
+             />
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="110dp"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout"
+            android:background="#c5c8d5"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/id"
+                    android:layout_marginLeft="10dp" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_ID"
+                    android:hint="身份证号码"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pwd"
+                    android:layout_marginLeft="10dp" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_password"
+                    android:inputType="textPassword"
+                    android:hint="密码" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_login"
+            android:text="登录"
+            android:background="#7486da"
+            android:layout_above="@+id/bt_register"
+            android:layout_marginTop="10dp"
+            android:layout_alignLeft="@+id/bt_id_code"
+            android:layout_alignStart="@+id/bt_id_code" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:text="注册"
+                android:id="@+id/bt_register"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+               />
+            <Button
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_id_code"
+                android:text="扫描获取ID"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

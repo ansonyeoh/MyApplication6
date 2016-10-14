@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
-    <color name="Indigo_colorPrimaryDark">#303f9f</color>
-    <color name="Indigo_colorPrimary">#3f51b5</color>
-    <color name="Indigo_nav_color">#4675FF</color>
+    <color name="Indigo_colorPrimaryDark">#3c51b5</color>
+    <color name="Indigo_colorPrimary">#3c51b5</color>
+    <color name="Indigo_nav_color">#3c51b5</color>
     <color name="skin_tabbar_bg">#5d53a3</color>
+    <color name="tab_halo">#E4ECFB</color>
+    <color name="white">#ffffff</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="balck">#000000</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
 </resources>

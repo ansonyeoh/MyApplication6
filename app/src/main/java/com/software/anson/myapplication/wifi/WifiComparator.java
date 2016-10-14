@@ -1,0 +1,22 @@
+package com.software.anson.myapplication.wifi;
+
+import java.util.Comparator;
+
+/**
+ * Created by JUANKI on 6/1/2016.
+ */
+public class WifiComparator implements Comparator<WifiConnection> {
+
+    @Override
+    public  int compare(WifiConnection a, WifiConnection b){
+        double ad = a.distance;
+        double bd = b.distance;
+
+        if(ad > bd)
+            return 1;
+        else if(bd > ad)
+            return -1;
+        else
+            return 0;
+    }
+}

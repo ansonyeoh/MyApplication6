@@ -1,32 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--<style name="AppTheme" parent="AppBaseTheme">-->
+        <!--<item name="android:actionMenuTextColor">@color/white</item>-->
+        <!--<item name="android:actionBarStyle">@style/my_actionbar_style</item>-->
+        <!--<item name="android:gravity">center</item>-->
+    <!--</style>-->
 
-      <style name="AppTheme" parent="@android:style/Theme.Holo.Light">
-          <item name="android:actionMenuTextColor">#FF0000</item>
-          <item name="android:actionBarStyle">@style/my_actionbar_style</item>
+    <!--<style name="my_actionbar_style" parent="@android:style/Widget.Holo.Light.ActionBar">-->
+        <!--<item name="android:background">@color/Indigo_colorPrimary</item>-->
+    <!--</style>-->
 
-      </style>
-    <style name="my_actionbar_style" parent="@android:style/Widget.Holo.Light.ActionBar">
-        <item name="android:background">@color/Indigo_colorPrimary</item>
+    <!--&lt;!&ndash;<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;状态栏颜色&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;<item name="colorPrimaryDark">@color/Indigo_colorPrimaryDark</item>&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;Toolbar颜色&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;<item name="colorPrimary">@color/Indigo_colorPrimary</item>&ndash;&gt;-->
+    <!--&lt;!&ndash;</style>&ndash;&gt;-->
+
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <!-- toolbar_device（actionbar）颜色 -->
+        <item name="colorPrimary">#303F9F</item>
+        <!-- 状态栏颜色 -->
+        <item name="colorPrimaryDark">#303F9F</item>
+
     </style>
-    <string name="ble_not_supported">你的手机不支持BLE</string>
-    <string name="label_data">Data:</string>
-    <string name="label_device_address">设备地址:</string>
-    <string name="label_state">State:</string>
-    <string name="no_data">No data</string>
-    <string name="connected">已连接</string>
-    <string name="disconnected">已断开连接</string>
-    <string name="title_devices">BLE 设备扫描</string>
-    <string name="error_bluetooth_not_supported">你的手机不支持蓝牙</string>
-    <string name="unknown_device">未知设备</string>
-    <string name="unknown_characteristic">未知特征值</string>
-    <string name="unknown_service">未知服务</string>
 
-    <!-- Menu items -->
-    <string name="menu_connect">Connect</string>
-    <string name="menu_disconnect">Disconnect</string>
-    <string name="menu_scan">Scan</string>
-    <string name="menu_stop">Stop</string>
-    <string name="device_rssi">rssi信号</string>
-    <string name="text_detail">detail</string>
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!-- toolbar_device（actionbar）颜色 -->
+        <item name="colorPrimary">#303F9F</item>
+        <!-- 状态栏颜色 -->
+        <item name="colorPrimaryDark">#303F9F</item>
+        <!--toolbar按钮-->
+        <item name="actionOverflowButtonStyle">@style/OverflowButtonStyle</item>
+    </style>
+    <style name="OverflowButtonStyle" parent="@android:style/Widget.ActionButton.Overflow">
+
+        <item name="android:src">@drawable/menu</item>
+    </style>
+    <style name="MySearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <!--
+    Background for the search query section (e.g. EditText)
+    <item name="queryBackground">...</item>
+    Background for the actions section (e.g. voice, submit)
+    <item name="submitBackground">...</item>
+    Close button icon
+    <item name="closeIcon">...</item>
+    Search button icon
+    <item name="searchIcon">...</item>
+    Go/commit button icon
+    <item name="goIcon">...</item>
+    Voice search button icon
+    <item name="voiceIcon">...</item>
+    Commit icon shown in the query suggestion row
+    <item name="commitIcon">...</item>
+    Layout for query suggestion rows
+    <item name="suggestionRowLayout">...</item>
+        -->
+
+    </style>
+
 </resources>
